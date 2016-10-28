@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsView" customModule="php" customModuleProvider="target">
+            <connections>
+                <outlet property="fontLabel" destination="JVI-iG-TId" id="hcY-X3-YCm"/>
+                <outlet property="slider" destination="pbV-6S-LAW" id="DMT-tR-7SW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHs-AG-sfQ" userLabel="Plus">
+                    <rect key="frame" x="224" y="22" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tvl-Yz-B9Q"/>
+                        <constraint firstAttribute="width" constant="30" id="xBM-hb-82V"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="plus.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="plus1.png"/>
+                    <state key="highlighted" backgroundImage="plus1.png"/>
+                    <connections>
+                        <action selector="increaseFont:" destination="-1" eventType="touchUpInside" id="zb8-3O-vYq"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aic-qf-NTe" userLabel="Line">
+                    <rect key="frame" x="0.0" y="70" width="283" height="1"/>
+                    <color key="backgroundColor" red="0.87571218920000005" green="0.87571218920000005" blue="0.87571218920000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pkN-KB-hAM"/>
+                    </constraints>
+                </view>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-6S-LAW">
+                    <rect key="frame" x="29" y="90" width="222" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.050980392156862744" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="setBrightness:" destination="-1" eventType="valueChanged" id="uXw-AP-2cr"/>
+                    </connections>
+                </slider>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lQH-tT-bh5">
+                    <rect key="frame" x="10" y="98" width="13" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="13" id="6LK-bI-znX"/>
+                        <constraint firstAttribute="height" constant="13" id="jIO-NT-mo5"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brightness.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="udq-uz-mfQ">
+                    <rect key="frame" x="253" y="96" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="DGg-mQ-yQ8"/>
+                        <constraint firstAttribute="height" constant="20" id="syo-BB-gAD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVI-iG-TId">
+                    <rect key="frame" x="86" y="15" width="110" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0UB-Ng-pcd"/>
+                        <constraint firstAttribute="width" constant="110" id="1AO-f9-Hor"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd4-4A-bby" userLabel="Minus">
+                    <rect key="frame" x="38" y="22" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="7lR-eM-YPo"/>
+                        <constraint firstAttribute="height" constant="30" id="ZJd-r4-ocM"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="minus.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="minus1.png"/>
+                    <state key="highlighted" backgroundImage="minus1.png"/>
+                    <connections>
+                        <action selector="decreaseFont:" destination="-1" eventType="touchUpInside" id="Mwf-Eh-GqY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pbV-6S-LAW" firstAttribute="leading" secondItem="lQH-tT-bh5" secondAttribute="trailing" constant="8" id="5le-zc-fkZ"/>
+                <constraint firstItem="udq-uz-mfQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="96" id="6Qn-Ce-Ozh"/>
+                <constraint firstItem="lQH-tT-bh5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="98" id="8tO-fh-N4m"/>
+                <constraint firstItem="lQH-tT-bh5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="8uW-Wm-csw"/>
+                <constraint firstItem="FHs-AG-sfQ" firstAttribute="leading" secondItem="JVI-iG-TId" secondAttribute="trailing" constant="28" id="AqN-hZ-3mx"/>
+                <constraint firstItem="aic-qf-NTe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="CJq-z2-rID"/>
+                <constraint firstItem="JVI-iG-TId" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Cf8-MZ-bqj"/>
+                <constraint firstItem="udq-uz-mfQ" firstAttribute="leading" secondItem="pbV-6S-LAW" secondAttribute="trailing" constant="4" id="EDK-GX-e2L"/>
+                <constraint firstAttribute="trailing" secondItem="udq-uz-mfQ" secondAttribute="trailing" constant="10" id="V8p-Hs-gge"/>
+                <constraint firstItem="pbV-6S-LAW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="WyJ-zL-iNc"/>
+                <constraint firstItem="JVI-iG-TId" firstAttribute="leading" secondItem="Wd4-4A-bby" secondAttribute="trailing" constant="18" id="bwX-6s-rc1"/>
+                <constraint firstAttribute="trailing" secondItem="aic-qf-NTe" secondAttribute="trailing" id="fN9-Jv-hn7"/>
+                <constraint firstAttribute="centerX" secondItem="JVI-iG-TId" secondAttribute="centerX" id="nCG-7u-TgB"/>
+                <constraint firstItem="FHs-AG-sfQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="rMI-xt-Ngi"/>
+                <constraint firstItem="aic-qf-NTe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uZn-0w-7Je"/>
+                <constraint firstItem="Wd4-4A-bby" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="vij-YD-74r"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="224.5" y="299.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="brightness.jpg" width="20" height="20"/>
+        <image name="minus.png" width="30" height="30"/>
+        <image name="minus1.png" width="30" height="30"/>
+        <image name="plus.png" width="30" height="30"/>
+        <image name="plus1.png" width="30" height="30"/>
+    </resources>
+</document>

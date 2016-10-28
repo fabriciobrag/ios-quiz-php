@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UINumberPicker" customModule="php" customModuleProvider="target">
+            <connections>
+                <outlet property="numberPicker" destination="R8f-3s-3ls" id="qOX-4w-xTE"/>
+                <outlet property="okButton" destination="xPW-e7-BaX" id="UPP-U4-r9h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="314"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adr-UI-0Z5">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="sfE-hH-FqP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6L-zT-f8k" userLabel="line">
+                    <rect key="frame" x="0.0" y="50" width="280" height="1"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Hxm-hU-m4O"/>
+                    </constraints>
+                </view>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8f-3s-3ls">
+                    <rect key="frame" x="0.0" y="65" width="280" height="180"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="J8S-cP-n3h"/>
+                        <outlet property="delegate" destination="-1" id="juj-8e-Rso"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPW-e7-BaX">
+                    <rect key="frame" x="90" y="269" width="100" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="9mn-g4-egz"/>
+                        <constraint firstAttribute="height" constant="35" id="CIC-Eg-lji"/>
+                    </constraints>
+                    <state key="normal" title="ok">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="okPressed:" destination="-1" eventType="touchUpInside" id="jNv-Ku-1Tq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="xPW-e7-BaX" secondAttribute="centerX" id="68L-pi-l3V"/>
+                <constraint firstItem="m6L-zT-f8k" firstAttribute="top" secondItem="adr-UI-0Z5" secondAttribute="bottom" id="8Z0-Ow-2I8"/>
+                <constraint firstAttribute="bottom" secondItem="xPW-e7-BaX" secondAttribute="bottom" constant="10" id="8o2-tQ-AYD"/>
+                <constraint firstAttribute="trailing" secondItem="R8f-3s-3ls" secondAttribute="trailing" id="Adk-rW-Hyc"/>
+                <constraint firstAttribute="trailing" secondItem="adr-UI-0Z5" secondAttribute="trailing" id="EG3-ug-7Mp"/>
+                <constraint firstItem="R8f-3s-3ls" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MsC-Rb-tup"/>
+                <constraint firstAttribute="trailing" secondItem="m6L-zT-f8k" secondAttribute="trailing" id="egh-9d-8qr"/>
+                <constraint firstItem="xPW-e7-BaX" firstAttribute="top" secondItem="R8f-3s-3ls" secondAttribute="bottom" constant="19" id="fb6-TU-Ry2"/>
+                <constraint firstItem="adr-UI-0Z5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jis-Iw-nHK"/>
+                <constraint firstItem="m6L-zT-f8k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lX4-TD-R7q"/>
+                <constraint firstItem="adr-UI-0Z5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="q6v-LQ-brz"/>
+                <constraint firstItem="R8f-3s-3ls" firstAttribute="top" secondItem="m6L-zT-f8k" secondAttribute="bottom" constant="9" id="x3D-SL-tlx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-296" y="219"/>
+        </view>
+    </objects>
+</document>

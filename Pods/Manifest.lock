@@ -1,0 +1,19 @@
+PODS:
+  - FMDB (2.4):
+    - FMDB/standard (= 2.4)
+  - FMDB/common (2.4)
+  - FMDB/standard (2.4):
+    - FMDB/common
+  - GoogleAnalytics-iOS-SDK (3.10):
+    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
+  - GoogleAnalytics-iOS-SDK/Core (3.10)
+
+DEPENDENCIES:
+  - FMDB
+  - GoogleAnalytics-iOS-SDK
+
+SPEC CHECKSUMS:
+  FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
+  GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
+
+COCOAPODS: 0.35.0

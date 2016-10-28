@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UITimeLimitPicker" customModule="php" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="MJU-YW-tyP" id="lo5-UO-GVM"/>
+                <outlet property="okButton" destination="4mu-2x-kDA" id="dPe-ef-w9L"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="314"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time limit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ST-IX-jJo">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="D93-mb-yUR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-i0-0ym" userLabel="Line">
+                    <rect key="frame" x="0.0" y="50" width="280" height="1"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="bse-du-s6F"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="MJU-YW-tyP">
+                    <rect key="frame" x="0.0" y="63" width="280" height="180"/>
+                    <date key="date" timeIntervalSinceReferenceDate="437088440.18726999">
+                        <!--2014-11-07 21:27:20 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="valueChange:" destination="-1" eventType="valueChanged" id="Ffz-8q-XPp"/>
+                    </connections>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mu-2x-kDA">
+                    <rect key="frame" x="90" y="271" width="100" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="JNc-J7-AfJ"/>
+                        <constraint firstAttribute="width" constant="100" id="x11-L1-4Nf"/>
+                    </constraints>
+                    <state key="normal" title="ok">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="okPressed:" destination="-1" eventType="touchUpInside" id="Q78-DZ-LYy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MJU-YW-tyP" secondAttribute="trailing" id="9kh-Xs-nd7"/>
+                <constraint firstItem="ImG-i0-0ym" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="En2-9O-TUo"/>
+                <constraint firstItem="0ST-IX-jJo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GgV-K1-w9p"/>
+                <constraint firstItem="ImG-i0-0ym" firstAttribute="top" secondItem="0ST-IX-jJo" secondAttribute="bottom" id="HGH-kc-Rpd"/>
+                <constraint firstAttribute="trailing" secondItem="ImG-i0-0ym" secondAttribute="trailing" id="MRP-S9-c54"/>
+                <constraint firstAttribute="centerX" secondItem="4mu-2x-kDA" secondAttribute="centerX" id="Mif-70-hMX"/>
+                <constraint firstItem="4mu-2x-kDA" firstAttribute="top" secondItem="MJU-YW-tyP" secondAttribute="bottom" constant="16" id="XbB-ep-vnE"/>
+                <constraint firstItem="MJU-YW-tyP" firstAttribute="top" secondItem="ImG-i0-0ym" secondAttribute="bottom" id="aa7-f4-2Sc"/>
+                <constraint firstAttribute="trailing" secondItem="0ST-IX-jJo" secondAttribute="trailing" id="e7y-oa-4cI"/>
+                <constraint firstAttribute="bottom" secondItem="4mu-2x-kDA" secondAttribute="bottom" constant="8" id="ffW-3T-WSN"/>
+                <constraint firstItem="MJU-YW-tyP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kgL-qs-L1R"/>
+                <constraint firstItem="0ST-IX-jJo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xCe-Ac-hxu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="252" y="312"/>
+        </view>
+    </objects>
+</document>
